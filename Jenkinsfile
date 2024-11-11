@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/dsiyarp/devops-jenkins.git'
+                git url: 'git@github.com:dsiyarp/devops-jenkins.git', credentialsId: '9ee12600-5468-467d-af03-ccd69b3a2bf4', branch: 'main'
             }
         }
         stage('Build') {
